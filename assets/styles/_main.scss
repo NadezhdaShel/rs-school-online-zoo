@@ -1,0 +1,66 @@
+html {
+    scroll-behavior: smooth;
+    position: absolute;
+    font-size: 10px;
+}
+
+body {
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    color: $color-primary-font;
+    background-color: $light;
+
+    &.active-burger {
+        overflow: hidden;
+    }
+}
+h1 {
+    font-size: 1.9rem;
+    line-height: 120%;
+    @media (max-width: $tablet) {
+        font-size: 1.2rem;
+    }
+}
+
+h2 {
+    font-size: 4.8rem;
+    line-height: 120%;
+
+    @media (max-width: $mobile) {
+        font-size: 2.4rem;
+    }
+}
+
+h3 {
+    font-size: 3.6rem;
+    line-height: 130%;
+   
+    @media (max-width: $mobile) {
+        font-size: 2.4rem;
+        line-height: 120%;
+    }
+}
+
+.page {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    flex: 0 0 auto;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}

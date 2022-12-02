@@ -1,0 +1,58 @@
+._text-link {
+    display: inline-block;
+    border-bottom: 1px solid $color-secondary;
+    border-image: $color-primary;
+    border-image-slice: 1;
+    color: inherit;
+
+    &:hover {
+        background: $color-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+._button {
+    display: inline-block;
+    border-radius: 25px;
+    padding: 16px 50px;
+    min-width: 298px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-light-font;
+    @extend %font-btn;
+    background-color: $color-secondary;
+    background-image: $color-primary;
+    transition: all 0.2s ease 0s;
+
+    &_rect {
+        border-radius: 5px;
+    }
+
+    @media (max-width: $mobile) {
+        min-width: 100%;
+    }
+
+    @media (max-width: 319px) {
+
+        padding: 16px 15px;
+        white-space: normal;
+    }
+
+    &:disabled {
+        background: $color-secondary-font;
+    }
+
+    &:hover {
+        background-image: none;
+        background-color: $color-button-hover;
+    }
+
+    &:active {
+        background: $green;
+    }
+}

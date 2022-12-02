@@ -1,0 +1,36 @@
+%subtitle-font {
+    font-size: 2.4rem;
+    line-height: 120%;
+    
+}
+
+%primary-font {
+    font-size: 1.6rem;
+    line-height: 140%;
+}
+
+%font-btn {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 140%;
+    
+}
+
+%simple-font {
+    font-size: 1.6rem;
+    line-height: 130%;
+}
+
+$line-height-small-paragraph: 1.2;
+
+%font-small-paragraph {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: calc(#{$line-height-small-paragraph} * 100%);
+    
+}
+
+%font-logo {
+    font-size: 1.9rem;
+    line-height: 120%;
+}

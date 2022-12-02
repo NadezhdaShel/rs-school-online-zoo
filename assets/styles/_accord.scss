@@ -1,0 +1,43 @@
+.accord {}
+
+.accord__text {
+    position: relative;
+    z-index: 50;
+    margin: 0;
+
+    &:not(:first-of-type) {
+        z-index: 30;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        margin: 0 0 30px;
+        transform: translateY(0%);
+
+        &:last-child {
+            margin: 0;
+        }
+
+    }
+
+    @for $i from 2 through 5 {
+        $coefficient: 0.08;
+        $duration: 2s * $coefficient;
+        $durationHeight: 10s * $coefficient;
+        $delay: ($i - 1) * $coefficient * 1s;
+        $delayHeight: ($i - 2) * $coefficient * 1s;
+
+        &:nth-of-type(#{$i}).show {
+            transition: transform #{$duration} #{$delay},
+            opacity #{$duration} #{$delay},
+            height #{$durationHeight} #{$delayHeight};
+        }
+    }
+}
+
+.accord__button {}

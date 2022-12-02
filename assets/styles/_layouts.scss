@@ -1,0 +1,33 @@
+._fullscreen {
+    min-height: 100vh;
+
+    >* {
+        min-height: 100vh;
+    }
+}
+
+._wrapper {
+    max-width: $max-width-content;
+    margin: 0 auto;
+
+    @media (max-width: $desktop) {
+        padding: 0px 30px;
+    }
+
+    @media (max-width: $tablet) {
+        padding: 0px 20px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 0px 10px;
+    }
+}
+
+// ._layout-3-col {
+//     display: flex;
+//     flex-wrap: wrap;
+
+//     >* {
+//         flex: 0 1 33.333%;
+//     }
+// }

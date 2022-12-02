@@ -1,0 +1,71 @@
+.simple-form {}
+
+.simple-form__item {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.simple-form__label {
+    display: block;
+    margin: 0px 0px 14px 0px;
+    color: $color-light-font;
+    @extend %subtitle-font;
+}
+
+.simple-form__text {
+    position: relative;
+    flex: 1 0 auto;
+    min-width: 228px;
+    padding: 10px 10px;
+    margin: 0px 10px 0px 0px;
+    color: $gray4;
+    border-radius: 2px;
+    background-color: inherit;
+    border: 1px solid $color-secondary;
+    @extend %primary-font;
+
+    &:hover {}
+
+    &:active {}
+
+    &:focus {
+        &:invalid {
+            border-color: $color-input-invalid;
+            color: $color-input-invalid;
+
+            +.simple-form__button {
+                border-color: $color-input-invalid;
+                color: $color-input-invalid;
+            }
+        }
+
+        &:valid {
+            border-color: $green;
+            color: $green;
+
+            +.simple-form__button {
+                border-color: $green;
+                color: $green;
+            }
+        }
+    }
+
+    &::placeholder {
+        color: inherit;
+    }
+
+}
+
+.simple-form__button {
+    flex: 0 0 auto;
+    padding: 10px 39px;
+    color: $color-dark-font;
+    background: $light_gray;
+    border: 1px solid $color-primary-font;
+    border-radius: 5px;
+    @extend %primary-font;
+
+    &:hover {}
+
+    &:active {}
+}

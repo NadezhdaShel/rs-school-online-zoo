@@ -1,0 +1,246 @@
+.footer {
+    background: #111115;
+}
+
+.footer__wrapper {
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    @media (max-width: $tablet) {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    @media (max-width: $tablet1) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.footer__items {
+    display: flex;
+
+    @media (max-width: $pad) {
+        flex-direction: column;
+    }
+}
+
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_one-col {
+        flex: 0 1 33.33%;
+
+        @media (max-width: $pad) {
+            position: relative;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0px 0px 67px 0px;
+        }
+
+        @media (max-width: $tablet1) {
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: nowrap;
+            position: static;
+            margin: 0px 0px 30px 0px;
+        }
+    }
+
+    &_two-col {
+        flex: 0 1 66.66%;
+    }
+}
+
+.footer__logo {
+    margin: 0px 0px 67px 0px;
+    @extend %font-logo;
+
+    @media (max-width: $pad) {
+        flex: 0 1 80%;
+        margin: 0px 0px 30px 0px;
+    }
+
+    .logo__link {
+        @media (max-width: $tablet1) {
+            flex-direction: row;
+            border: none;
+            padding: 0;
+        }
+    }
+
+    .logo__img {
+        @media (max-width: $tablet1) {
+            position: relative;
+            bottom: 0px;
+            left: 10px;
+        }
+
+    }
+}
+
+.footer__subscribe {
+    align-self: flex-end;
+
+    @media (max-width: $small-desktop) {
+        margin: 0px 30px 0px 0px;
+    }
+    @media (max-width: $pad) {
+        display: none;
+    }
+}
+
+.footer__subscribe-form {}
+
+.footer__active {
+    margin: 0px 0px 44px 0px;
+
+    @media (max-width: $pad) {
+        margin: 0px;
+        flex: 0 1 80%;
+    }
+
+    @media (max-width: $tablet1) {
+        flex: 0 1 auto;
+        order: 3;
+    }
+
+}
+
+.footer__button {}
+
+.footer__social-list {
+    @media (max-width: $pad) {
+        position: absolute;
+        right: 0;
+    }
+
+    @media (max-width: $tablet1) {
+        order: 2;
+        position: static;
+    }
+
+    @media (max-width: $tablet1) {
+        display: flex;
+        margin: 0px 0px 30px 0px;
+    }
+}
+
+.footer__social-item {
+    margin: 0px 0px 10px 0px;
+
+    @media (max-width: $tablet) {
+        margin: 0px 0px 20px 0px;
+    }
+    @media (max-width: $tablet1) {
+        margin: 0px 30px 0px 0px;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.footer__social-link {
+    display: block;
+
+    &:hover {
+        .footer__social-icon {
+            background-color: $green;
+        }
+
+        .footer__social-text {
+            color: $green;
+        }
+    }
+}
+
+.footer__social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 12px 0px 0px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.5);
+
+    @media (max-width: $pad) {
+        margin: 0px;
+    }
+
+    svg {
+        fill: $light;
+    }
+}
+
+.footer__social-text {
+    color: $color-light-font;
+
+    @media (max-width: $pad) {
+        display: none;
+    }
+}
+
+.footer__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (max-width: $small-desktop1) {
+        flex-direction: column-reverse;
+    }
+
+    @media (max-width: $pad) {
+        flex-direction: row;
+    }
+
+    @media (max-width: $tablet1) {
+        flex-direction: column-reverse;
+    }   
+}
+
+.footer__nav {
+    @media (max-width: $tablet1) {
+        align-self: center;
+    }
+    .nav__list {
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.footer__copyright {
+    @media (max-width: $small-desktop1) {
+        margin: 0px 0px 30px 0px;
+    }
+
+    @media (max-width: $pad) {
+        margin: 0px 0px 0px 0px;
+    }
+
+    @media (max-width: $tablet1) {
+        margin: 0px 0px 30px 0px;
+
+    }
+    p {
+        margin: 0px 0px 10px 0px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.footer__copyright-link {
+    font-weight: 100;
+    @extend %simple-font;
+    color: $color-light-font;
+
+    &:hover {
+        text-decoration: underline;
+        color: $green;
+    }
+}

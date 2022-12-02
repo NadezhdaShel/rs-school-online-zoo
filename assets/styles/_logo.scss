@@ -1,0 +1,55 @@
+.logo {
+    
+}
+
+.logo__link {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    padding: 3px 4px 3px 4px;
+    border: 1px solid $light;
+    border-radius: 2px;
+    text-align: center;
+    color: $color-light-font;
+
+    &.active-burger {
+        border: 1px solid $color-secondary;
+        padding: 3px 4px 3px 4px;
+        background: $color-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        .logo__img svg {
+            fill: $color-secondary;
+        }
+    }
+
+    span {
+        
+    }
+
+    &:hover {
+        border-color: $color-secondary;
+        background: $color-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        .logo__img svg {
+            fill: $color-secondary;
+        }
+    }
+}
+
+.logo__img {
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    left: 11px;
+    
+    svg {
+        fill: $light;
+        
+    }
+}
